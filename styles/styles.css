@@ -3,13 +3,13 @@ main {
 }
 
 nav {
+    border-radius: 1 5;
     background-color: green;
-    padding: 0%;
+    padding: 0;
 }
 
 nav a {
     color: aquamarine;
-    padding: auto;
     display: block;
 }
 
@@ -20,7 +20,7 @@ h1 {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(red, rgb(10, 109, 10), blue);
+    border: 1px solid rgb(rgb(10, 109, 10), blue);
     padding: 1rem;
     background-color: #eee;
     color: #333;
@@ -37,7 +37,7 @@ main img {
     height: auto;
     border: #000;
     padding: 0%;
-    box-shadow: #333;
+
 }
 
 p {
@@ -46,7 +46,7 @@ p {
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: 5px solid #000;
     text-align: center;
-    border-color: green;
+    border-color: rgb(223, 39, 223);
 }
