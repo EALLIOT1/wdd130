@@ -3,7 +3,8 @@ main {
 }
 
 nav {
-    border-radius: 1 5;
+    border-radius: margin: 1523px;
+    ;
     background-color: green;
     padding: 0;
 }
@@ -21,7 +22,7 @@ h1 {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(rgb(10, 109, 10), blue);
+    border: 1px solid rgb(10, 109, 10);
     padding: 1rem;
     background-color: #eee;
     color: #333;
