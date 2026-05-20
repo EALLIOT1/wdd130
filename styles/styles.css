@@ -11,7 +11,7 @@ nav {
 nav a {
     color: aquamarine;
     padding: 1rem 2rem;
-    display: inline-block;
+    display: block;
     text-decoration: none;
 }
 
