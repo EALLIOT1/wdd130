@@ -1,53 +1,54 @@
-main {
-    max-width: 840px;
+/* 1. Universal Selector Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* 2. CSS Variables in :root */
+:root {
+    --primary-color: #006400;
+    /* Darker green to pass accessibility */
+    --accent-color: #7fffd4;
+    /* Aquamarine */
+    --text-color: #333333;
+}
+
+/* 3. Color Contrast Fix */
+/* Your current light aquamarine text on a standard green background doesn't have enough contrast. */
 nav {
-    border: 50px;
-    background-color: green;
-    padding: 0;
+    background-color: var(--primary-color);
 }
 
 nav a {
-    color: aquamarine;
-    padding: 1rem 2rem;
-    display: block;
+    color: #ffffff;
+    /* Changing this to white or a much darker background will fix the 4.20:1 low contrast error */
     text-decoration: none;
 }
 
-h1 {
-    color: purple;
+/* 4. Hero Overlay Positioning */
+.hero {
+    position: relative;
 }
 
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(10, 109, 10);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-aside img {
-    width: 200px;
-    height: auto;
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid #000;
-    padding: 0;
-    box-shadow: 0px 4px 10px #333;
-}
-
-p {
-    padding: 0;
-}
-
-footer {
-    margin-top: 15px;
-    border-top: 5px solid rgb(223, 39, 223);
-    text-align: center;
+/* 5. Article Image Float */
+.hero article img {
+    float: right;
+    margin-left: 15px;
 }
