@@ -1,28 +1,22 @@
-/* 1. Universal Selector Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. CSS Variables in :root */
 :root {
-    --primary-color: #006400;
-    /* Darker green to pass accessibility */
-    --accent-color: #7fffd4;
-    /* Aquamarine */
-    --text-color: #333333;
+    primary-color: #006400;
+    accent-color: #7fffd4;
+    text-color: #333333;
 }
-
-/* 3. Color Contrast Fix */
-/* Your current light aquamarine text on a standard green background doesn't have enough contrast. */
-nav {
+nav
+{
     background-color: var(--primary-color);
 }
 
 nav a {
     color: #ffffff;
-    /* Changing this to white or a much darker background will fix the 4.20:1 low contrast error */
     text-decoration: none;
 }
 
