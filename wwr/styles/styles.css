@@ -26,7 +26,6 @@ nav a {
     text-decoration: none;
 }
 
-/* 4. Hero Overlay Positioning */
 .hero {
     position: relative;
 }
@@ -47,7 +46,6 @@ nav a {
     padding: 20px;
 }
 
-/* 5. Article Image Float */
 .hero article img {
     float: right;
     margin-left: 15px;
