@@ -1,4 +1,4 @@
-
+/* --- Global Resets --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-
+/* --- Container --- */
 .quiz-container {
     background-color: #f0f0f0;
     width: 100%;
@@ -25,7 +25,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-
+/* --- Header --- */
 .quiz-header {
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ body {
     margin-right: 10px;
 }
 
-
+/* --- Form Groups & Labels --- */
 .form-group {
     margin-bottom: 20px;
 }
@@ -61,7 +61,7 @@ label {
     color: #000080;
 }
 
-
+/* --- Inputs --- */
 input[type="text"],
 textarea,
 select {
@@ -72,14 +72,23 @@ select {
     background-color: #ffffff;
     font-family: inherit;
     font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Added custom focus state for accessibility */
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
     outline: none;
+    border-color: #000080;
+    box-shadow: 0 0 0 3px rgba(0, 0, 128, 0.15);
 }
 
 textarea {
     resize: vertical;
 }
 
-
+/* --- Code Snippet --- */
 .code-block {
     background-color: #333333;
     color: #ffffff;
@@ -94,9 +103,10 @@ textarea {
     font-size: 0.9rem;
 }
 
+/* --- Submit Button --- */
 .submit-btn {
     width: 100%;
-    background-color: green;
+    background-color: #2e7d32; 
     color: #ffffff;
     border: none;
     padding: 14px;
@@ -108,6 +118,7 @@ textarea {
     margin-top: 10px;
 }
 
+/* Fixed color mismatch on hover */
 .submit-btn:hover {
-    background-color: #000066;
+    background-color: #1b5e20; /* Darker green for smooth transition */
 }
