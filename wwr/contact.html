@@ -1,61 +1,17 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Water Rafting Company</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Water Rafting Company</title>
+    <meta name="description" content="Get in touch with Water Rafting Company. Contact us for booking information, trip inquiries, and directions to our rafting sites.">
+    <meta name="author" content="Oyinlola Oyedeji Ashade">
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
-<body>
-
-    <div class="quiz-container">
-        <div class="quiz-header">
-            <span class="checkbox-icon">&#9745;</span>
-            <h1>Basic HTML and CSS Quiz</h1>
-        </div>
-
-        <form action="#" method="POST">
-            
-            <div class="form-group">
-                <label for="q1"><span class="q-num">1.</span> What does the acronym CSS stand for?</label>
-                <input type="text" id="q1" name="css_definition">
-            </div>
-
-            <div class="form-group">
-                <label for="q2"><span class="q-num">2.</span> How are id and class attributes selected in CSS?</label>
-                <textarea id="q2" name="css_selectors" rows="4"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="q3"><span class="q-num">3.</span> Which of the following is a valid CSS comment?</label>
-                <select id="q3" name="css_comment">
-                    <option value="" disabled selected>Choose One ...</option>
-                    <option value="a">/* comment */</option>
-                    <option value="b">&lt;!-- comment --&gt;</option>
-                    <option value="c">// comment</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="q4"><span class="q-num">4.</span> What is the bottom margin given this declaration?</label>
-                <div class="code-block">
-                    <code>margin: 10px 5px 15px;</code>
-                </div>
-                <input type="text" id="q4" name="margin_answer">
-            </div>
-
-            <button type="submit" class="submit-btn">Submit Quiz</button>
-
-        </form>
-    </div>
-
 <body>
 
     <header>
         <img src="images/rafting-logo.png" alt="Rafting Company Logo">
-
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -64,37 +20,44 @@
         </nav>
     </header>
 
-<main>
-<h1>Mission | Water Rafting Company</h1>
- <div class="hero">
-            <img src="images/hero-image.jpg" alt="White Water Rafting Adventure">
-          <article>
-                <img src="images/happy-clients.png" alt="Happy Clients">
+    <main>
+        <h1>Contact Water Rafting Company</h1>
 
-                <p>
-                    At Water Rafting Company, we are passionate about creating thrilling and
-                    unforgettable rafting adventures.
-                    Our mission is to provide safe, exciting, and memorable outdoor experiences for
-                    families, friends, and adventure seekers.
-                    We believe every river journey should inspire confidence, teamwork, and
-                    excitement.
-                </p>
-            </article>
-        </div>
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="user_name" required>
+            </div>
 
-        
-        <section>
-            <h2>History</h2>
-            <p>
-                Water Rafting Company was founded with a vision to bring people closer to nature
-                through exciting river adventures.
-                Over the years, we have guided countless visitors through beautiful rapids while
-                maintaining the highest standards
-                of safety, professionalism, and customer satisfaction.
-            </p>
-        </section>
+            <div class="form-group">
+                <p>What is your preferred rafting challenge level?</p>
+                <label for="lvl-easy">
+                    <input type="radio" id="lvl-easy" name="trip_level" value="easy"> Calm Waters (Beginner)
+                </label>
+                <label for="lvl-med">
+                    <input type="radio" id="lvl-med" name="trip_level" value="moderate"> Mid-Tier Rapids (Intermediate)
+                </label>
+                <label for="lvl-hard">
+                    <input type="radio" id="lvl-hard" name="trip_level" value="hard"> High Adrenaline (Advanced)
+                </label>
+            </div>
 
-        
+            <div class="form-group">
+                <label for="message">Your Message / Inquiries:</label>
+                <textarea id="message" name="user_message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="newsletter_subscribe" value="yes"> Subscribe to seasonal trip updates and discounts
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+
+        </form>
+
         <section class="adventure-section">
             <h2>Adventure Awaits You!</h2>
             <div class="adventure-gallery">
@@ -124,25 +87,19 @@
     </main>
 
     <footer>
-
-        <p>&copy; 2026 | Water Rafting Company | Oyinlola Oyedeji Ashade
+        <p>&copy; 2026 | Water Rafting Company | Oyinlola Oyedeji Ashade</p>
 
         <nav class="socialmedia">
-
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="Facebook icon">
             </a>
-
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" target="_blank">
                 <img src="images/instagram.png" alt="Instagram icon">
             </a>
-
-            <a href="https://linkedin.com">
+            <a href="https://linkedin.com" target="_blank">
                 <img src="images/linkedin.png" alt="LinkedIn icon">
             </a>
-
         </nav>
-
     </footer>
 
 </body>
