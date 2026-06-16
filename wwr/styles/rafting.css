@@ -1,1 +1,334 @@
+:root {
+    --primary-color: #0B4F6C;
+    --secondary-color: #005f87;
+    --accent1-color: #FBFBFF;
+    --accent2-color: #444444;
 
+    --heading-font: Georgia, serif;
+    --body-font: Arial, sans-serif;
+}
+
+/* 1. Make header stick to top and stay above everything */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; /* or whatever your header bg is */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+}
+
+/* 2. Push main content down so it doesn't hide under fixed header */
+main {
+  margin-top: 80px; /* adjust this to match your header height */
+}
+
+/* 3. If hero-box is absolutely positioned, anchor it inside hero-container */
+.hero-container {
+  position: relative;
+}
+
+.hero-box {
+  position: absolute;
+  top: 50%; /* centers it vertically in the hero image */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 74, 115, 0.85); /* your blue overlay */
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fluid Global Image Resizing */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Body */
+body {
+    font-family: var(--body-font);
+    color: var(--accent2-color);
+    background-color: var(--accent1-color);
+}
+
+/* --- MOBILE-FIRST BASE STYLES --- */
+/* Fixed layout error: Replaced fixed width: 840px with a fluid max-width scale */
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 960px; /* Expands beautifully on desktop, flows smoothly on mobile */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header & Navigation Layout for Mobile */
+header {
+    display: flex;
+    flex-direction: column; /* Stack logo and navigation vertically on small screens */
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+header img {
+    width: 100px;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap; /* Prevents overflow if link text is long */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-container, 
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading Layout for Mobile */
+.hero-box h2,
+.hero h1 {
+    position: static; /* Keeps text stacked naturally and safe from overlapping on mobile */
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Hero Article Layout for Mobile */
+.hero-box,
+.hero article {
+    background-color: var(--accent1-color);
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.hero article img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto;
+    float: none; /* Disabling float on small viewports avoids awkward text squeezing */
+}
+
+/* Sections & Grid Layout for Mobile */
+section {
+    margin: 1.5rem 0;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+/* Responsive Newsletter Form styling */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-field input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn, .cta-btn, .contact-cta {
+    display: inline-block;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Grid Content Area using Auto-Fit to adjust card count organically */
+.grid-content,
+.trips-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.grid-card, .trip-card {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Adventure Gallery */
+.adventure-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to flow to the next line on mobile */
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.adventure-gallery img {
+    flex: 1 1 150px; /* Fluid image expansion mapping */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Tables */
+.table-section {
+    overflow-x: auto; /* Enables horizontal swipe if the table overflows small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Footer Mobile First */
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* --- 🖥️ DESKTOP MEDIA QUERY (Screens wider than 768px) --- */
+@media screen and (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 115px 1fr;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    /* Absolute Hero Layout Positioning adjustments for Desktop views */
+    .hero, .hero-container {
+        position: relative;
+    }
+
+    .hero h1, .hero-box h2 {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(11, 79, 108, 0.85);
+    }
+
+    .hero article, .hero-box {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        margin-top: 0;
+        background-color: rgba(251, 251, 255, 0.95);
+    }
+
+    .hero article img {
+        float: right;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .form-field {
+        flex: 1;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
