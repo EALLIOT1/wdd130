@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - White Water Rafting Adventures</title>
-    <meta name="description" content="Get in touch with White Water Rafting Company. Contact us for booking information, trip inquiries, preferred adventure levels, or directions.">
+    <meta name="description" content="Get in touch with White Water Rafting Company. Contact us for booking information, trip inquiries, or operational requests.">
     <meta name="author" content="Oyinlola Ashade">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-     <header>
+    <header>
         <div class="logo-container">
             <img src="images/logo.png" alt="White Water Rafting Company Logo" class="logo">
         </div>
@@ -22,52 +22,44 @@
     </header>
 
     <main>
-        <h1>Contact Water Rafting Company</h1>
-
-        <form action="#" method="POST" class="contact-form">
-            
-           
-            <div class="form-group">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="user_name" required placeholder="Your First and Last Name">
+         <section class="form-container">
+            <div class="form-header">
+                <h2>Send a Message</h2>
+                <p>Fill out the operational request form below. Your input will be processed securely:</p>
             </div>
 
-             <div class="form-group">
-                <label for="email-address">Email Address:</label>
-                <input type="email" id="email-address" name="user_email" required placeholder="username@example.com">
-            </div>
-
-             <fieldset class="form-group-fieldset">
-                <legend>What is your preferred rafting challenge level?</legend>
-                <div class="radio-options">
-                    <label for="lvl-easy">
-                        <input type="radio" id="lvl-easy" name="trip_level" value="easy"> Calm Waters (Beginner)
-                    </label>
-                    <label for="lvl-med">
-                        <input type="radio" id="lvl-med" name="trip_level" value="moderate"> Mid-Tier Rapids (Intermediate)
-                    </label>
-                    <label for="lvl-hard">
-                        <input type="radio" id="lvl-hard" name="trip_level" value="hard"> High Adrenaline (Advanced)
-                    </label>
+            <form action="#" method="POST" class="contact-form">
+                
+                <div class="form-group">
+                    <label for="full-name">Full Name / Company:</label>
+                    <input type="text" id="full-name" name="user_name" required placeholder="e.g., Lualaba Mining Corp">
                 </div>
-            </fieldset>
 
-          <div class="form-group">
-                <label for="message">Your Message / Inquiries:</label>
-                <textarea id="message" name="user_message" rows="5" required placeholder="How can we help you plan your next rafting trip?"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="email-address">Professional Email Address:</label>
+                    <input type="email" id="email-address" name="user_email" required placeholder="kirongozinotes1@gmail.com">
+                </div>
 
-            <div class="form-group-checkbox">
-                <label for="subscribe">
-                    <input type="checkbox" id="subscribe" name="newsletter_subscribe" value="yes"> Subscribe to seasonal trip updates and discounts
-                </label>
-            </div>
+                <div class="form-group">
+                    <label for="subject">Inquiry Subject:</label>
+                    <select id="subject" name="inquiry_subject" required>
+                        <option value="recruitment">Talent Acquisition / Recruitment</option>
+                        <option value="booking">Trip Booking & Reservations</option>
+                        <option value="general">General Operational Inquiry</option>
+                    </select>
+                </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+                <div class="form-group">
+                    <label for="message">Detailed Message:</label>
+                    <textarea id="message" name="user_message" rows="5" required placeholder="Type your corporate specifications or interview proposal here..."></textarea>
+                </div>
 
-        </form>
+                <button type="submit" class="submit-btn-secure">Submit Secure Message 🚀</button>
 
-         <section class="adventure-section">
+            </form>
+        </section>
+
+        <section class="adventure-section">
             <h2>Adventure Awaits You!</h2>
             <div class="adventure-gallery">
                 <figure>
@@ -97,17 +89,10 @@
 
     <footer>
         <p>&copy; 2026 | White Water Rafting | Oyinlola Ashade | Oyinlola Milestone Store</p>
-
         <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="Facebook logo link profile">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="Instagram logo link profile">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn logo link profile">
-            </a>
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook logo link profile"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram logo link profile"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn logo link profile"></a>
         </nav>
     </footer>
 
