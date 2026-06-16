@@ -8,7 +8,45 @@
     --body-font: Arial, sans-serif;
 }
 
-/* Universal Selector */
+/* 1. Make header stick to top and stay above everything */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; /* or whatever your header bg is */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+}
+
+/* 2. Push main content down so it doesn't hide under fixed header */
+main {
+  margin-top: 80px; /* adjust this to match your header height */
+}
+
+/* 3. If hero-box is absolutely positioned, anchor it inside hero-container */
+.hero-container {
+  position: relative;
+}
+
+.hero-box {
+  position: absolute;
+  top: 50%; /* centers it vertically in the hero image */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 74, 115, 0.85); /* your blue overlay */
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
