@@ -1,51 +1,11 @@
 :root {
     --primary-color: #0B4F6C;
     --secondary-color: #005f87;
-    --accent1-color: #FBFBFF;
-    --accent2-color: #444444;
-
+    --accent1-color: #FBFF;
+    --accent2-color: #444;
     --heading-font: Georgia, serif;
     --body-font: Arial, sans-serif;
 }
-
-/* 1. Make header stick to top and stay above everything */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white; /* or whatever your header bg is */
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
-}
-
-/* 2. Push main content down so it doesn't hide under fixed header */
-main {
-  margin-top: 80px; /* adjust this to match your header height */
-}
-
-/* 3. If hero-box is absolutely positioned, anchor it inside hero-container */
-.hero-container {
-  position: relative;
-}
-
-.hero-box {
-  position: absolute;
-  top: 50%; /* centers it vertically in the hero image */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: rgba(0, 74, 115, 0.85); /* your blue overlay */
-  color: white;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-
 
 * {
     margin: 0;
@@ -53,49 +13,54 @@ main {
     box-sizing: border-box;
 }
 
-/* Fluid Global Image Resizing */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Body */
 body {
     font-family: var(--body-font);
     color: var(--accent2-color);
     background-color: var(--accent1-color);
 }
 
-/* --- MOBILE-FIRST BASE STYLES --- */
-/* Fixed layout error: Replaced fixed width: 840px with a fluid max-width scale */
-header,
-main,
-footer {
-    width: 100%;
-    max-width: 960px; /* Expands beautifully on desktop, flows smoothly on mobile */
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* Header & Navigation Layout for Mobile */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary-color);
     display: flex;
-    flex-direction: column; /* Stack logo and navigation vertically on small screens */
+    flex-direction: column;
     gap: 1rem;
     align-items: center;
-    background-color: var(--primary-color);
     padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header img {
     width: 100px;
 }
 
+main {
+    margin-top: 160px;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 nav {
     width: 100%;
     background-color: var(--secondary-color);
     display: flex;
-    flex-wrap: wrap; /* Prevents overflow if link text is long */
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 0.5rem 0;
@@ -114,16 +79,13 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Headings */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* Hero Section */
-.hero-container, 
-.hero {
+.hero-container { 
     position: relative;
     width: 100%;
 }
@@ -134,36 +96,24 @@ h2 {
     height: auto;
 }
 
-/* Hero Heading Layout for Mobile */
-.hero-box h2,
-.hero h1 {
-    position: static; /* Keeps text stacked naturally and safe from overlapping on mobile */
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-/* Hero Article Layout for Mobile */
-.hero-box,
-.hero article {
+.hero-box {
     background-color: var(--accent1-color);
     padding: 1.2rem;
     margin-top: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
+    text-align: center;
 }
 
-.hero article img {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 1rem auto;
-    float: none; /* Disabling float on small viewports avoids awkward text squeezing */
+.hero-box h2 {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Sections & Grid Layout for Mobile */
 section {
     margin: 1.5rem 0;
 }
@@ -172,7 +122,6 @@ section p {
     line-height: 1.6;
 }
 
-/* Responsive Newsletter Form styling */
 .newsletter-form {
     display: flex;
     flex-direction: column;
@@ -206,7 +155,6 @@ section p {
     margin-top: 0.5rem;
 }
 
-/* Grid Content Area using Auto-Fit to adjust card count organically */
 .grid-content,
 .trips-display {
     display: grid;
@@ -222,24 +170,22 @@ section p {
     border-radius: 8px;
 }
 
-/* Adventure Gallery */
 .adventure-gallery {
     display: flex;
-    flex-wrap: wrap; /* Allows images to flow to the next line on mobile */
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 1rem;
 }
 
 .adventure-gallery img {
-    flex: 1 1 150px; /* Fluid image expansion mapping */
+    flex: 1 1 150px;
     height: 120px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Tables */
 .table-section {
-    overflow-x: auto; /* Enables horizontal swipe if the table overflows small screens */
+    overflow-x: auto;
 }
 
 table {
@@ -254,7 +200,6 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Footer Mobile First */
 footer {
     margin-top: 2rem;
     border-top: 1px solid #ccc;
@@ -275,46 +220,43 @@ footer {
     height: 32px;
 }
 
-
-/* --- 🖥️ DESKTOP MEDIA QUERY (Screens wider than 768px) --- */
 @media screen and (min-width: 768px) {
     header {
         display: grid;
         grid-template-columns: 115px 1fr;
         flex-direction: row;
         gap: 0;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    main {
+        margin-top: 110px;
     }
 
     nav {
         width: auto;
+        justify-self: end;
     }
 
-    /* Absolute Hero Layout Positioning adjustments for Desktop views */
-    .hero, .hero-container {
-        position: relative;
-    }
-
-    .hero h1, .hero-box h2 {
+    .hero-box {
         position: absolute;
-        top: 30px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(11, 79, 108, 0.85);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 74, 115, 0.85);
+        color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        border: none;
+        width: 60%;
+        max-width: 500px;
+        margin-top: 0;
     }
 
-    .hero article, .hero-box {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-        right: 30px;
-        margin-top: 0;
-        background-color: rgba(251, 251, 255, 0.95);
-    }
-
-    .hero article img {
-        float: right;
-        margin-left: 1rem;
-        margin-top: 0;
+    .hero-box h2 {
+        background-color: transparent;
+        padding: 0 0 0.5rem 0;
     }
 
     .newsletter-form {
